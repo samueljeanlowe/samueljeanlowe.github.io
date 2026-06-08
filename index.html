@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samue Lowe</title>
+  <title>Samuel Lowe</title>
   <meta name="description" content="Samuel Lowe - Online privacy tools" />
   <link rel="canonical" href="https://samueljeanlowe.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -246,10 +246,10 @@
 
   <div class="filter-bar">
     <span class="filter-label">Filter</span>
-    <button class="filter-btn" data-tag="CN">CN</button>
-    <button class="filter-btn" data-tag="RU">RU</button>
-    <button class="filter-btn" data-tag="FR">FR</button>
     <button class="filter-btn" data-tag="Open-source">Open-source</button>
+    <button class="filter-btn" data-tag="FR">FR</button>
+    <button class="filter-btn" data-tag="RU">RU</button>
+    <button class="filter-btn" data-tag="CN">CN</button>
     <button class="filter-btn" data-tag="Huawei AppGallery">Huawei AppGallery</button>
     <button class="filter-btn" id="reset-btn">All</button>
   </div>
@@ -282,7 +282,7 @@ const data = [
   { name: "FreeBSD",            url: "https://www.freebsd.org",              desc: "Unix-like OS known for reliability and performance",         tags: ["Open-source"] },
   { name: "Astra Linux",        url: "https://astralinux.ru",                desc: "Russian secure Linux distribution for government use",       tags: ["Open-source", "RU"] },
   { name: "Kylin OS",           url: "https://www.kylinos.cn",               desc: "Chinese Linux OS developed for national security",           tags: ["Open-source", "CN"] },
-  { name: "DeepSeek",           url: "https://www.deepseek.com",             desc: "Chinese open-weight AI assistant and coding model",          tags: ["CN"] },
+  { name: "DeepSeek",           url: "https://www.deepseek.com",             desc: "Chinese open-weight AI assistant and coding model",          tags: ["CN", "Huawei AppGallery"] },
   { name: "Claude",             url: "https://claude.ai",                    desc: "AI assistant by Anthropic focused on safety and nuance",     tags: [] },
   { name: "DeepL",              url: "https://www.deepl.com",                desc: "High-accuracy neural machine translation service",           tags: [] },
   { name: "Perplexity AI",      url: "https://www.perplexity.ai",            desc: "AI-powered answer engine with real-time web search",        tags: [] },
@@ -293,26 +293,26 @@ const data = [
   { name: "Qwant",              url: "https://www.qwant.com",                desc: "French privacy-respecting search engine",                   tags: ["FR"] },
   { name: "Startpage",          url: "https://www.startpage.com",            desc: "Anonymous Google results without tracking",                 tags: [] },
   { name: "Yandex Search",      url: "https://www.yandex.com",               desc: "Russian search engine with strong Cyrillic indexing",       tags: ["RU"] },
-  { name: "Telegram",           url: "https://telegram.org",                 desc: "Cloud-based messaging with large groups and bots",          tags: [] },
+  { name: "Telegram",           url: "https://telegram.org",                 desc: "Cloud-based messaging with large groups and bots",          tags: ["Huawei AppGallery"] },
   { name: "Signal",             url: "https://signal.org",                   desc: "End-to-end encrypted private messenger",                    tags: ["Open-source"] },
-  { name: "WeChat",             url: "https://www.wechat.com",               desc: "Chinese all-in-one messaging and payments super-app",       tags: ["CN"] },
+  { name: "WeChat",             url: "https://www.wechat.com",               desc: "Chinese all-in-one messaging and payments super-app",       tags: ["CN", "Huawei AppGallery"] },
   { name: "Session",            url: "https://getsession.org",               desc: "Decentralized, anonymous messaging with no phone number",   tags: ["Open-source"] },
   { name: "Matrix + Element",   url: "https://element.io",                   desc: "Decentralized federated chat protocol and client",          tags: ["Open-source"] },
   { name: "Mattermost",         url: "https://mattermost.com",               desc: "Self-hosted team messaging platform",                       tags: ["Open-source"] },
   { name: "Mumble",             url: "https://www.mumble.com",               desc: "Low-latency open-source voice chat",                        tags: ["Open-source"] },
-  { name: "Yandex Mail",        url: "https://mail.yandex.com",              desc: "Russian email service with generous storage",               tags: ["RU"] },
+  { name: "Yandex Mail",        url: "https://mail.yandex.com",              desc: "Russian email service with generous storage",               tags: ["RU", "Huawei AppGallery"] },
   { name: "Onion Mail",         url: "https://onionmail.org",                desc: "Anonymous email service accessible via Tor",               tags: ["Open-source"] },
   { name: "Mautic",             url: "https://www.mautic.org",               desc: "Self-hosted open-source marketing automation",             tags: ["Open-source"] },
   { name: "OpenStreetMap",      url: "https://www.openstreetmap.org",        desc: "Community-built free world map",                           tags: ["Open-source"] },
   { name: "Yandex Maps",        url: "https://yandex.com/maps",              desc: "Russian mapping service with detailed CIS coverage",        tags: ["RU"] },
   { name: "LibreOffice",        url: "https://www.libreoffice.org",          desc: "Full-featured open-source office suite",                   tags: ["Open-source"] },
-  { name: "Nextcloud",          url: "https://nextcloud.com",                desc: "Self-hosted file sync, calendar and collaboration",         tags: ["Open-source"] },
+  { name: "Nextcloud",          url: "https://nextcloud.com",                desc: "Self-hosted file sync, calendar and collaboration",         tags: ["Open-source", "Huawei AppGallery"] },
   { name: "Trello",             url: "https://trello.com",                   desc: "Visual kanban-style project management boards",            tags: [] },
   { name: "n8n",                url: "https://n8n.io",                       desc: "Self-hostable workflow automation tool",                    tags: ["Open-source"] },
   { name: "Huginn",             url: "https://github.com/huginn/huginn",     desc: "Self-hosted agent system for automated tasks",             tags: ["Open-source"] },
   { name: "CiviCRM",            url: "https://civicrm.org",                  desc: "Open-source CRM for nonprofits and NGOs",                  tags: ["Open-source"] },
   { name: "Bitwarden",          url: "https://bitwarden.com",                desc: "Open-source password manager with cloud sync",             tags: ["Open-source"] },
-  { name: "Yandex Disk",        url: "https://disk.yandex.com",              desc: "Russian cloud storage with 10 GB free",                    tags: ["RU"] },
+  { name: "Yandex Disk",        url: "https://disk.yandex.com",              desc: "Russian cloud storage with 10 GB free",                    tags: ["RU", "Huawei AppGallery"] },
   { name: "Yandex Documents",   url: "https://docs.yandex.ru",               desc: "Russian online document editor similar to Google Docs",    tags: ["RU"] },
   { name: "Mega",               url: "https://mega.io",                      desc: "End-to-end encrypted cloud storage",                       tags: [] },
   { name: "Bitcoin",            url: "https://bitcoin.org",                  desc: "Decentralized peer-to-peer cryptocurrency",                tags: ["Open-source"] },
@@ -356,6 +356,7 @@ const data = [
   { name: "Maigret",            url: "https://github.com/soxoj/maigret",     desc: "Username search across hundreds of social platforms",  tags: ["Open-source"] },
   { name: "WhatsMyName",        url: "https://whatsmyname.app",              desc: "Username enumeration across online services",         tags: ["Open-source"] },
   { name: "PimEyes",            url: "https://pimeyes.com",                  desc: "Reverse face search engine using AI",                 tags: [] },
+  { name: "Search4faces",       url: "https://search4faces.com",             desc: "Russian reverse face search engine using AI",                 tags: ["RU"] },
   { name: "Yandex Images",      url: "https://yandex.com/images",            desc: "Reverse image search with strong facial recognition", tags: ["RU"] },
   { name: "Tor Project",        url: "https://www.torproject.org",           desc: "Anonymity network and privacy browser",               tags: ["Open-source"] },
   { name: "Tails OS",           url: "https://tails.boum.org",               desc: "Live OS routed through Tor for anonymity",            tags: ["Open-source"] },

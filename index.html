@@ -20,8 +20,10 @@
       --accent: #ffffff;
       --tag-oss: #1a2e22;
       --tag-oss-text: #6dbb8a;
-      --tag-hw: #1a1f34;
-      --tag-hw-text: #7a9fd4;
+      --tag-hw: #2e1a1a;
+      --tag-hw-text: #d46a6a;
+      --tag-rs: #1a1e2e;
+      --tag-rs-text: #6a8ad4;
       --tag-cn: #2e1a1a;
       --tag-cn-text: #d46a6a;
       --tag-ru: #1a1e2e;
@@ -136,6 +138,7 @@
     .filter-btn[data-tag="FR"].active  { background: var(--tag-fr-text);  border-color: var(--tag-fr-text);  color: #0d0e10; }
     .filter-btn[data-tag="Open-source"].active { background: var(--tag-oss-text); border-color: var(--tag-oss-text); color: #0d0e10; }
     .filter-btn[data-tag="Huawei AppGallery"].active { background: var(--tag-hw-text); border-color: var(--tag-hw-text); color: #0d0e10; }
+    .filter-btn[data-tag="RuStore"].active { background: var(--tag-rs-text); border-color: var(--tag-rs-text); color: #0d0e10; }
     .filter-btn#reset-btn { margin-left: auto; }
 
     .search-wrap { margin-bottom: 1.6rem; }
@@ -191,6 +194,7 @@
     .tag-FR  { background: var(--tag-fr);  color: var(--tag-fr-text); }
     .tag-OSS { background: var(--tag-oss); color: var(--tag-oss-text); }
     .tag-HW  { background: var(--tag-hw);  color: var(--tag-hw-text); }
+    .tag-RS  { background: var(--tag-rs);  color: var(--tag-rs-text); }
 
     #empty { text-align: center; padding: 3rem 0; color: var(--muted); font-size: 14px; display: none; }
     .counter { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 1rem; }
@@ -247,10 +251,11 @@
   <div class="filter-bar">
     <span class="filter-label">Filter</span>
     <button class="filter-btn" data-tag="Open-source">Open-source</button>
-    <button class="filter-btn" data-tag="FR">FR</button>
-    <button class="filter-btn" data-tag="RU">RU</button>
-    <button class="filter-btn" data-tag="CN">CN</button>
     <button class="filter-btn" data-tag="Huawei AppGallery">Huawei AppGallery</button>
+    <button class="filter-btn" data-tag="RuStore">RuStore</button>
+    <button class="filter-btn" data-tag="FR">FR</button>
+    <button class="filter-btn" data-tag="CN">CN</button>
+    <button class="filter-btn" data-tag="RU">RU</button>
     <button class="filter-btn" id="reset-btn">All</button>
   </div>
 
@@ -282,7 +287,7 @@ const data = [
   { name: "FreeBSD",            url: "https://www.freebsd.org",              desc: "Unix-like OS known for reliability and performance",         tags: ["Open-source"] },
   { name: "Astra Linux",        url: "https://astralinux.ru",                desc: "Russian secure Linux distribution for government use",       tags: ["Open-source", "RU"] },
   { name: "Kylin OS",           url: "https://www.kylinos.cn",               desc: "Chinese Linux OS developed for national security",           tags: ["Open-source", "CN"] },
-  { name: "DeepSeek",           url: "https://www.deepseek.com",             desc: "Chinese open-weight AI assistant and coding model",          tags: ["CN", "Huawei AppGallery"] },
+  { name: "DeepSeek",           url: "https://www.deepseek.com",             desc: "Chinese open-weight AI assistant and coding model",          tags: ["CN", "Huawei AppGallery", "RuStore"] },
   { name: "Claude",             url: "https://claude.ai",                    desc: "AI assistant by Anthropic focused on safety and nuance",     tags: [] },
   { name: "DeepL",              url: "https://www.deepl.com",                desc: "High-accuracy neural machine translation service",           tags: [] },
   { name: "Perplexity AI",      url: "https://www.perplexity.ai",            desc: "AI-powered answer engine with real-time web search",        tags: [] },
@@ -291,11 +296,12 @@ const data = [
   { name: "ElevenLabs",         url: "https://elevenlabs.io",                desc: "AI voice cloning and text-to-speech platform",              tags: [] },
   { name: "Brave",              url: "https://brave.com",                    desc: "Privacy-first browser with built-in ad blocker",            tags: ["Open-source"] },
   { name: "Yandex Browser",     url: "https://browser.yandex.com",           desc: "Russian browser",
-    tags: ["RU", "Huawei AppGallery"] },
+    tags: ["Huawei AppGallery","RuStore","RU"] },
   { name: "Qwant",              url: "https://www.qwant.com",                desc: "French privacy-respecting search engine",                   tags: ["FR"] },
   { name: "Startpage",          url: "https://www.startpage.com",            desc: "Anonymous Google results without tracking",                 tags: [] },
-  { name: "Yandex Search",      url: "https://www.yandex.com",               desc: "Russian search engine with strong Cyrillic indexing",       tags: ["RU"] },
-  { name: "Telegram",           url: "https://telegram.org",                 desc: "Cloud-based messaging with large groups and bots",          tags: ["Huawei AppGallery"] },
+  { name: "Yandex Search",      url: "https://www.yandex.com",               desc: "Russian search engine with strong Cyrillic indexing",       tags: ["RuStore", "RU"] },
+  { name: "Max",           url: "https://max.ru",                            desc: "Russian messenger and e-commerce app",
+    tags: ["RuStore", "RU"] },
   { name: "Signal",             url: "https://signal.org",                   desc: "End-to-end encrypted private messenger",                    tags: ["Open-source"] },
   { name: "WeChat",             url: "https://www.wechat.com",               desc: "Chinese all-in-one messaging and payments super-app",       tags: ["CN", "Huawei AppGallery"] },
   { name: "Session",            url: "https://getsession.org",               desc: "Decentralized, anonymous messaging with no phone number",   tags: ["Open-source"] },
@@ -384,7 +390,7 @@ const data = [
   { name: "Gab",                url: "https://gab.com",                      desc: "Free-speech focused social network",                  tags: [] },
   { name: "Geneanet",           url: "https://www.geneanet.org",             desc: "French genealogy platform with millions of trees",    tags: ["FR"] },
   { name: "Filae",              url: "https://www.filae.com",                desc: "French genealogy service with historical archives",   tags: ["FR"] },
-  { name: "Yandex Translate",   url: "https://translate.yandex.com",         desc: "Russian neural machine translation service",         tags: ["RU"] },
+  { name: "Yandex Translate",   url: "https://translate.yandex.com",         desc: "Russian neural machine translation service",         tags: ["RuStore", "RU"] },
   { name: "Android File Transfer", url: "https://www.android.com/filetransfer", desc: "Transfer files between Android and macOS",       tags: [] },
 ];
 
@@ -394,6 +400,7 @@ const TAG_META = {
   "FR":                { cls: "tag-FR",  label: "FR" },
   "Open-source":       { cls: "tag-OSS", label: "Open-source" },
   "Huawei AppGallery": { cls: "tag-HW",  label: "Huawei AppGallery" },
+  "RuStore":           { cls: "tag-RS",  label: "RuStore" },
 };
 
 let activeTag = null;

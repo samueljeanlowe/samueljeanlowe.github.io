@@ -141,6 +141,7 @@
     .filter-btn[data-tag="Open-source"].active { background: var(--tag-oss-text); border-color: var(--tag-oss-text); color: #0d0e10; }
     .filter-btn[data-tag="Huawei AppGallery"].active { background: var(--tag-hw-text); border-color: var(--tag-hw-text); color: #0d0e10; }
     .filter-btn[data-tag="RuStore"].active { background: var(--tag-rs-text); border-color: var(--tag-rs-text); color: #0d0e10; }
+    .filter-btn[data-tag="F-Droid"].active { background: var(--tag-fd-text); border-color: var(--tag-fd-text); color: #0d0e10; }
     .filter-btn#reset-btn { margin-left: auto; }
 
     .search-wrap { margin-bottom: 1.6rem; }
@@ -195,6 +196,7 @@
     .tag-RU  { background: var(--tag-ru);  color: var(--tag-ru-text); }
     .tag-FR  { background: var(--tag-fr);  color: var(--tag-fr-text); }
     .tag-OSS { background: var(--tag-oss); color: var(--tag-oss-text); }
+    .tag-FD  { background: var(--tag-fd);  color: var(--tag-fd-text); }
     .tag-HW  { background: var(--tag-hw);  color: var(--tag-hw-text); }
     .tag-RS  { background: var(--tag-rs);  color: var(--tag-rs-text); }
 
@@ -290,34 +292,34 @@ const data = [
   { name: "FreeBSD",            url: "https://www.freebsd.org",              desc: "Unix-like OS known for reliability and performance",         tags: ["Open-source"] },
   { name: "Astra Linux",        url: "https://astralinux.ru",                desc: "Russian secure Linux distribution for government use",       tags: ["Open-source", "RU"] },
   { name: "Kylin OS",           url: "https://www.kylinos.cn",               desc: "Chinese Linux OS developed for national security",           tags: ["Open-source", "CN"] },
-  { name: "DeepSeek",           url: "https://www.deepseek.com",             desc: "Chinese open-weight AI assistant and coding model",          tags: ["CN", "Huawei AppGallery", "RuStore"] },
+  { name: "DeepSeek",           url: "https://www.deepseek.com",             desc: "Chinese open-weight AI assistant and coding model",          tags: ["Huawei AppGallery", "RuStore","CN"] },
   { name: "Stable Diffusion",   url: "https://stablediffusionweb.com",       desc: "Open-source AI image synthesis model",                      tags: ["Open-source"] },
   { name: "Brave",              url: "https://brave.com",                    desc: "Privacy-first browser with built-in ad blocker",            tags: ["Open-source", "RuStore"] },
   { name: "Yandex Browser",     url: "https://browser.yandex.com",           desc: "Russian browser",
-    tags: ["Huawei AppGallery", "RuStore","RU"] },
-  { name: "Qwant",              url: "https://www.qwant.com",                desc: "French privacy-respecting search engine",                   tags: ["FR", "Huawei AppGallery"] },
+    tags: ["Huawei AppGallery", "RuStore", "RU"] },
+  { name: "Qwant",              url: "https://www.qwant.com",                desc: "French privacy-respecting search engine",                   tags: ["Huawei AppGallery", "FR"] },
   { name: "Startpage",          url: "https://www.startpage.com",            desc: "Anonymous Google results without tracking",                 tags: [] },
   { name: "Yandex Search",      url: "https://www.yandex.com",               desc: "Russian search engine with strong Cyrillic indexing",       tags: ["RuStore", "RU"] },
   { name: "Max",           url: "https://max.ru",                            desc: "Russian messenger and e-commerce app",
     tags: ["RuStore", "RU"] },
   { name: "Signal",             url: "https://signal.org",                   desc: "End-to-end encrypted private messenger",                    tags: ["Open-source"] },
-  { name: "WeChat",             url: "https://www.wechat.com",               desc: "Chinese all-in-one messaging and payments super-app",       tags: ["CN", "Huawei AppGallery", "RuStore"] },
+  { name: "WeChat",             url: "https://www.wechat.com",               desc: "Chinese all-in-one messaging and payments super-app",       tags: ["Huawei AppGallery", "RuStore", "CN"] },
   { name: "Session",            url: "https://getsession.org",               desc: "Decentralized, anonymous messaging with no phone number",   tags: ["Open-source", "Huawei AppGallery", "RuStore"] },
   { name: "Matrix + Element",   url: "https://element.io",                   desc: "Decentralized federated chat protocol and client",          tags: ["Open-source"] },
   { name: "Mattermost",         url: "https://mattermost.com",               desc: "Self-hosted team messaging platform",                       tags: ["Open-source", "F-Droid"] },
   { name: "Mumble",             url: "https://www.mumble.com",               desc: "Low-latency open-source voice chat",                        tags: ["Open-source"] },
-  { name: "Yandex Mail",        url: "https://mail.yandex.com",              desc: "Russian email service with generous storage",               tags: ["RU", "Huawei AppGallery", "RuStore"] },
+  { name: "Yandex Mail",        url: "https://mail.yandex.com",              desc: "Russian email service with generous storage",               tags: ["Huawei AppGallery", "RuStore", "RU"] },
   { name: "Onion Mail",         url: "https://onionmail.org",                desc: "Anonymous email service accessible via Tor",               tags: ["Open-source"] },
   { name: "Mautic",             url: "https://www.mautic.org",               desc: "Self-hosted open-source marketing automation",             tags: ["Open-source"] },
   { name: "OpenStreetMap",      url: "https://www.openstreetmap.org",        desc: "Community-built free world map",                           tags: ["Open-source"] },
-  { name: "Yandex Maps",        url: "https://yandex.com/maps",              desc: "Russian mapping service with detailed CIS coverage",        tags: ["RU", "RuStore"] },
+  { name: "Yandex Maps",        url: "https://yandex.com/maps",              desc: "Russian mapping service with detailed CIS coverage",        tags: ["RuStore", "RU"] },
   { name: "LibreOffice",        url: "https://www.libreoffice.org",          desc: "Full-featured open-source office suite",                   tags: ["Open-source"] },
   { name: "Nextcloud",          url: "https://nextcloud.com",                desc: "Self-hosted file sync, calendar and collaboration",         tags: ["Open-source", "Huawei AppGallery"] },
   { name: "n8n",                url: "https://n8n.io",                       desc: "Self-hostable workflow automation tool",                    tags: ["Open-source"] },
   { name: "Huginn",             url: "https://github.com/huginn/huginn",     desc: "Self-hosted agent system for automated tasks",             tags: ["Open-source"] },
   { name: "CiviCRM",            url: "https://civicrm.org",                  desc: "Open-source CRM for nonprofits and NGOs",                  tags: ["Open-source"] },
-  { name: "Bitwarden",          url: "https://bitwarden.com",                desc: "Open-source password manager with cloud sync",             tags: ["Open-source"] },
-  { name: "Yandex Disk",        url: "https://disk.yandex.com",              desc: "Russian cloud storage with 10 GB free",                    tags: ["RU", "Huawei AppGallery", "RuStore"] },
+  { name: "Bitwarden",          url: "https://bitwarden.com",                desc: "Open-source password manager with cloud sync",             tags: ["Open-source", "RuStore"] },
+  { name: "Yandex Disk",        url: "https://disk.yandex.com",              desc: "Russian cloud storage with 10 GB free",                    tags: ["Huawei AppGallery", "RuStore", "RU"] },
   { name: "Yandex Documents",   url: "https://docs.yandex.ru",               desc: "Russian online document editor similar to Google Docs",    tags: ["RU"] },
   { name: "Mega",               url: "https://mega.io",                      desc: "End-to-end encrypted cloud storage",                       tags: [] },
   { name: "Bitcoin",            url: "https://bitcoin.org",                  desc: "Decentralized peer-to-peer cryptocurrency",                tags: ["Open-source"] },
@@ -352,8 +354,8 @@ const data = [
   { name: "YouTube Transcript", url: "https://youtubetranscript.com",        desc: "Extract and download transcripts from YouTube videos", tags: [] },
   { name: "VLC Media Player",   url: "https://vlc-media-player.org",         desc: "Universal open-source media player (VideoLAN / FR)",   tags: ["Open-source", "FR"] },
   { name: "Audacity",           url: "https://audacityteam.org",             desc: "Free multi-track audio editor and recorder",          tags: ["Open-source"] },
-  { name: "VK Music",           url: "https://vk.com/music",                 desc: "Russian music streaming integrated in VK",            tags: ["RU"] },
-  { name: "Yandex Music",       url: "https://music.yandex.com",             desc: "Russian music streaming service by Yandex",           tags: ["RU"] },
+  { name: "VK Music",           url: "https://vk.com/music",                 desc: "Russian music streaming integrated in VK",            tags: ["RuStore", "RU"] },
+  { name: "Yandex Music",       url: "https://music.yandex.com",             desc: "Russian music streaming service by Yandex",           tags: ["Huawei AppGallery", "RuStore", "RU"] },
   { name: "Have I Been Pwned",  url: "https://haveibeenpwned.com",           desc: "Check if your email appeared in data breaches",        tags: [] },
   { name: "Epieos",             url: "https://epieos.com",                   desc: "OSINT lookup for emails and phone numbers",            tags: [] },
   { name: "Wayback Machine",    url: "https://archive.org/web",              desc: "Browse archived historical snapshots of websites",     tags: [] },
@@ -371,7 +373,7 @@ const data = [
   { name: "Temu",               url: "https://www.temu.com",                 desc: "Chinese low-cost global e-commerce marketplace",      tags: ["CN"] },
   { name: "AliExpress",         url: "https://www.aliexpress.com",           desc: "Chinese retail marketplace for international buyers",  tags: ["CN"] },
   { name: "Alibaba",            url: "https://www.alibaba.com",              desc: "Chinese B2B wholesale trade platform",                tags: ["CN"] },
-  { name: "Yandex Go",          url: "https://go.yandex",                    desc: "Russian ride-hailing and delivery super-app",         tags: ["RU"] },
+  { name: "Yandex Go",          url: "https://go.yandex",                    desc: "Russian ride-hailing and delivery super-app",         tags: ["Huawei AppGallery", "RuStore", "RU"] },
   { name: "CoopCycle",          url: "https://coopcycle.org",                desc: "French cooperative platform for local bike delivery",  tags: ["Open-source", "FR"] },
   { name: "Z-Library",          url: "https://en.zlibrary-fr.se",            desc: "Largest online library of books and articles",        tags: [] },
   { name: "Wikisource",         url: "https://wikisource.org",               desc: "Free library of public domain texts",                 tags: ["Open-source"] },
@@ -381,13 +383,13 @@ const data = [
   { name: "PageSpeed Insights", url: "https://pagespeed.web.dev",            desc: "Analyze and improve web page loading performance",    tags: [] },
   { name: "Vide-Greniers.org",  url: "https://vide-greniers.org",            desc: "French directory of flea markets and garage sales",   tags: ["FR"] },
   { name: "Gensdeconfiance",    url: "https://gensdeconfiance.com",          desc: "French trusted community marketplace",                tags: ["FR"] },
-  { name: "Ozon",               url: "https://www.ozon.ru",                  desc: "One of Russia's largest e-commerce platforms",        tags: ["RU"] },
-  { name: "Yandex Market",      url: "https://market.yandex.ru",             desc: "Russian price comparison and online shopping service", tags: ["RU"] },
+  { name: "Ozon",               url: "https://www.ozon.ru",                  desc: "One of Russia's largest e-commerce platforms",        tags: ["Huawei AppGallery", "RuStore", "RU"] },
+  { name: "Yandex Market",      url: "https://market.yandex.ru",             desc: "Russian price comparison and online shopping service", tags: ["RuStore", "RU"] },
   { name: "Mastodon",           url: "https://joinmastodon.org",             desc: "Federated open-source microblogging network",         tags: ["Open-source"] },
   { name: "Gab",                url: "https://gab.com",                      desc: "Free-speech focused social network",                  tags: [] },
   { name: "Geneanet",           url: "https://www.geneanet.org",             desc: "French genealogy platform with millions of trees",    tags: ["FR"] },
   { name: "Filae",              url: "https://www.filae.com",                desc: "French genealogy service with historical archives",   tags: ["FR"] },
-  { name: "Yandex Translate",   url: "https://translate.yandex.com",         desc: "Russian neural machine translation service",         tags: ["RuStore", "RU"] },
+  { name: "Yandex Translate",   url: "https://translate.yandex.com",         desc: "Russian neural machine translation service",         tags: ["Huawei AppGallery", "RuStore", "RU"] },
   { name: "Android File Transfer", url: "https://www.android.com/filetransfer", desc: "Transfer files between Android and macOS",       tags: [] },
 ];
 
